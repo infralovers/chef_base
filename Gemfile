@@ -1,12 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
+# get Berkshelf 3.0.beta
 
-# Uncomment these lines (and the ones in the generated Vagrantfile) if you want
-# to live on the Edge:
-#
-# gem "berkshelf", github: "berkshelf/berkshelf"
-# gem "vagrant", github: "mitchellh/vagrant", tag: "v1.3.5"
-# gem "vagrant-berkshelf", github: "berkshelf/vagrant-berkshelf"
-# gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus", tag: "v1.1.2"
-
+gem "berkshelf", github: "berkshelf/berkshelf"
+gem "vagrant", github: "mitchellh/vagrant", tag: "v1.4.3"
+gem "vagrant-berkshelf", github: "berkshelf/vagrant-berkshelf"
+gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
