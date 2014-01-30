@@ -13,4 +13,8 @@ suites:
   - name: default
     run_list:
       - recipe[chef_base::default]
-    attributes:
+    attributes: 
+      chef_base:
+        include:
+          hipchat_handler: true
+
