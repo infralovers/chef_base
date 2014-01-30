@@ -5,8 +5,6 @@
 # to live on the Edge:
 #
 
-Vagrant.require_plugin "vagrant-berkshelf"
-Vagrant.require_plugin "vagrant-omnibus"
 
 Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
