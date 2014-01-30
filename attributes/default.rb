@@ -1,3 +1,4 @@
-default['chef_base']['include']['chef-client'] = false
-default['chef_base']['include']['chef_handler'] = false
-default['chef_base']['include']['hipchat_handler'] = false
+default['base']['include']['chef-client'] = false
+default['base']['include']['simple_report_handler'] = true
+default['base']['include']['hipchat_handler'] = false
+default['base']['include']['chef-sugar'] = true
