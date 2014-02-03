@@ -17,16 +17,25 @@
 # limitations under the License.
 #
 
+# https://github.com/opscode-cookbooks/apt
 include_recipe "apt"
 
-include_recipe "chef-client::delete_validation"
-include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
+# https://github.com/opscode-cookbooks/ntp/
+include_recipe "ntp" if node['base']['include']['ntp']
 
+# https://github.com/opscode-cookbooks/chef-client
+include_recipe "chef-client::delete_validation"
 include_recipe "chef-client" if node['base']['include']['chef-client']
 
+# https://github.com/sethvargo/chef-sugar
+include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
+
+# http://jtimberman.housepub.org/blog/2011/04/24/a-simple-report-handler/
 include_recipe "base::simple_report_handler" if node['base']['include']['simple_report_handler']
 
+# https://github.com/cwjohnston/chef-hipchat
 include_recipe "hipchat::handler" if node['base']['include']['hipchat_handler']
 
+# https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
 
