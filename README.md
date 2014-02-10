@@ -1,10 +1,11 @@
-# chef_base-cookbook
+# base-cookbook
 
-TODO: Enter the cookbook description here.
+Base is a application cookbook around base cookbooks and recipes we want to include in our environments. 
+Some are default as we need them to be on our nodes, some are attribute driven so we can specify if we want to include them.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+- Ubuntu
 
 ## Attributes
 
@@ -16,9 +17,9 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['chef_base']['bacon']</tt></td>
+    <td><tt>['base']['include']['chef-client']</tt></td>
     <td>Boolean</td>
-    <td>whether to include bacon</td>
+    <td>whether to include the chef-client service</td>
     <td><tt>true</tt></td>
   </tr>
 </table>
@@ -27,12 +28,12 @@ TODO: List your supported platforms.
 
 ### chef_base::default
 
-Include `chef_base` in your node's `run_list`:
+Include `base` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[chef_base::default]"
+    "recipe[base::default]"
   ]
 }
 ```
@@ -48,4 +49,4 @@ Include `chef_base` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Edmund Haselwanter (edmund@haselwanter.com)
