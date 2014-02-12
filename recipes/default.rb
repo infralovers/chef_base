@@ -39,3 +39,9 @@ include_recipe "hipchat::handler" if node['base']['include']['hipchat_handler']
 # https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
 
+include_recipe "base::motd" if node['base']['include']['motd']
+include_recipe "base::operation_tools" if node['base']['include']['operation_tools']
+
+
+
+
