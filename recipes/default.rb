@@ -20,6 +20,9 @@
 # https://github.com/opscode-cookbooks/apt
 include_recipe "apt"
 
+# https://github.com/opscode-cookbooks/build-essential
+include_recipe "build_essential" if node['base']['include']['build_essential']
+
 # https://github.com/opscode-cookbooks/ntp/
 include_recipe "ntp" if node['base']['include']['ntp']
 
@@ -34,7 +37,14 @@ include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
 include_recipe "base::simple_report_handler" if node['base']['include']['simple_report_handler']
 
 # https://github.com/cwjohnston/chef-hipchat
-include_recipe "hipchat::handler" if node['base']['include']['hipchat_handler']
+if node['base']['include']['hipchat_handler']
+
+  #needed to get it installed at compiletime
+  node.set['build_essential']['compiletime'] = true
+  include_recipe "build-essential"
+  include_recipe "hipchat::handler" 
+
+end  
 
 # https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
