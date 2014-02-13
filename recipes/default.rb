@@ -39,19 +39,15 @@ include_recipe "base::simple_report_handler" if node['base']['include']['simple_
 # https://github.com/cwjohnston/chef-hipchat
 if node['base']['include']['hipchat_handler']
 
-  #needed to get it installed at compiletime
+  # needed to get it installed at compiletime
   node.set['build_essential']['compiletime'] = true
   include_recipe "build-essential"
-  include_recipe "hipchat::handler" 
+  include_recipe "hipchat::handler"
 
-end  
+end
 
 # https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
 
 include_recipe "base::motd" if node['base']['include']['motd']
 include_recipe "base::operation_tools" if node['base']['include']['operation_tools']
-
-
-
-

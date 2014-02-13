@@ -1,6 +1,5 @@
 # motd.rb
 
-
 template "/etc/motd.tail" do
   source "motd.tail.erb"
   group  "root"
@@ -8,5 +7,3 @@ template "/etc/motd.tail" do
   mode   00644
   backup 0
 end
-
-
