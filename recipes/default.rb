@@ -21,7 +21,7 @@
 include_recipe "apt"
 
 # https://github.com/opscode-cookbooks/build-essential
-include_recipe "build_essential" if node['base']['include']['build_essential']
+include_recipe "build-essential" if node['base']['include']['build_essential']
 
 # https://github.com/opscode-cookbooks/ntp/
 include_recipe "ntp" if node['base']['include']['ntp']
