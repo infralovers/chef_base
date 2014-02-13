@@ -13,4 +13,9 @@ describe "base::default" do
     expect(chef_run).to include_recipe "apt"
   end
 
+  it "should not include chef-client" do
+    expect(chef_run).to_not include_recipe "chef-client::default"
+  end
+    
+
 end
