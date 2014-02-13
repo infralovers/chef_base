@@ -1,6 +1,6 @@
 name             'base'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Edmund Haselwanter'
+maintainer_email 'edmund@haselwanter.com'
 license          'All rights reserved'
 description      'Installs/Configures chef_base'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
