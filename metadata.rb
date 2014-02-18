@@ -19,3 +19,4 @@ depends 'chef_handler'
 depends 'hipchat'
 
 depends 'vim'
+depends 'tmux'
