@@ -4,7 +4,7 @@ maintainer_email 'edmund@haselwanter.com'
 license          'All rights reserved'
 description      'Installs/Configures chef_base'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.1'
+version          '0.2.2'
 
 supports 'ubuntu'
 
