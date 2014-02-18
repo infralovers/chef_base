@@ -9,8 +9,10 @@ describe "base::default" do
     end.converge(described_recipe)
   end
 
-  it "should include apt" do
-    expect(chef_run).to include_recipe "apt"
+  %w{ apt vim tmux}.each do |rcp|
+    it "should include the #{rcp} recipe" do
+      expect(chef_run).to include_recipe rcp
+    end
   end
 
   it "should not include chef-client" do

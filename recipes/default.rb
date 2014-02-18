@@ -49,5 +49,9 @@ end
 # https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
 
+# https://github.com/opscode-cookbooks/tmux
+include_recipe 'tmux'
+
+
 include_recipe "base::motd" if node['base']['include']['motd']
 include_recipe "base::operation_tools" if node['base']['include']['operation_tools']
