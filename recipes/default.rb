@@ -50,8 +50,8 @@ end
 include_recipe "vim"
 
 # https://github.com/opscode-cookbooks/tmux
+node.normal['tmux']['session_opts']['prefix'] = 'C-b'
 include_recipe 'tmux'
-
 
 include_recipe "base::motd" if node['base']['include']['motd']
 include_recipe "base::operation_tools" if node['base']['include']['operation_tools']
