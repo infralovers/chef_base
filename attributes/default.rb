@@ -48,5 +48,3 @@ default['base']['operation-tools'] = %w( htop iotop apachetop atop nmon dstat if
 
 # Include [build_essential](https://github.com/opscode-cookbooks/build-essential) cookbook
 default['base']['include']['build_essential'] = false
-
-
