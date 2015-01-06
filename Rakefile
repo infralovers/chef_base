@@ -1,30 +1,63 @@
-require "foodcritic"
-require "rspec/core/rake_task"
-require "rubocop/rake_task"
+#!/usr/bin/env rake
+# encoding: utf-8
 
-desc "Run RuboCop style and lint checks"
-Rubocop::RakeTask.new(:rubocop)
+require 'foodcritic'
+require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
 
-desc "Run Foodcritic lint checks"
-FoodCritic::Rake::LintTask.new(:foodcritic) do |t|
-  t.options = { :fail_tags => ["any"] }
+# General tasks
+
+# Rubocop before rspec so we don't lint vendored cookbooks
+desc 'Run all tests except Kitchen (default task)'
+task integration: %w(rubocop foodcritic spec)
+task default: :integration
+
+# Lint the cookbook
+desc 'Run linters'
+task lint: [:rubocop, :foodcritic]
+
+# Lint the cookbook
+desc 'Run all linters: rubocop and foodcritic'
+task run_all_linters: [:rubocop, :foodcritic]
+
+# Run the whole shebang
+desc 'Run all tests'
+task test: [:lint, :integration]
+
+# RSpec
+desc 'Run chefspec tests'
+task :spec do
+  puts 'Running Chefspec tests'
+  RSpec::Core::RakeTask.new(:spec)
 end
 
-desc "Run ChefSpec examples"
-RSpec::Core::RakeTask.new(:spec)
+# Foodcritic
+desc 'Run foodcritic lint checks'
+task :foodcritic do
+  if Gem::Version.new('1.9.2') <= Gem::Version.new(RUBY_VERSION.dup)
+    puts 'Running Foodcritic tests...'
+    FoodCritic::Rake::LintTask.new do |t|
+      t.options = { fail_tags: ['any'] }
+      puts 'done.'
+    end
+  else
+    puts "WARN: foodcritic run is skipped as Ruby #{RUBY_VERSION} is < 1.9.2."
+  end
+end
 
-desc "Run all tests"
-task :test => [:rubocop, :foodcritic, :spec]
-task :default => :test
+# Rubocop
+desc 'Run Rubocop lint checks'
+task :rubocop do
+  RuboCop::RakeTask.new
+end
 
 begin
-  require "kitchen/rake_tasks"
+  require 'kitchen/rake_tasks'
   Kitchen::RakeTasks.new
 
-  desc "Alias for kitchen:all"
-  task :integration => "kitchen:all"
+  desc 'Alias for kitchen:all'
+  task acceptance: 'kitchen:all'
 
-  task :test => :integration
 rescue LoadError
-  puts ">>>>> Kitchen gem not loaded, omitting tasks" unless ENV['CI']
+  puts '>>>>> Kitchen gem not loaded, omitting tasks' unless ENV['CI']
 end
