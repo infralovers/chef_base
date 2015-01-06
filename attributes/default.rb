@@ -9,6 +9,6 @@ default['base']['include']['operation_tools'] = true
 default['base']['include']['build_essential'] = false
 
 # no package 'glances' on 12.04
-default['base']['operation-tools'] = %w{ htop iotop apachetop atop nmon dstat iftop nload }
+default['base']['operation-tools'] = %w( htop iotop apachetop atop nmon dstat iftop nload )
 
 default['base']['motd']['operation_tools'] = true
