@@ -24,10 +24,12 @@ require 'chef/json_compat'
 require 'logger'
 require 'mixlib/log'
 
+# Class Log
 class Log
   extend Mixlib::Log
 end
 
+# Class Report
 class Report
   include Mixlib::CLI
   option :reports_dir,
