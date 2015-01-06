@@ -1,9 +1,9 @@
 AllCops:
-  Includes:
+  Include:
     - Berksfile
     - Gemfile
     - Rakefile
-  Excludes:
+  Exclude:
     - vendor/**
 
 AlignParameters:
