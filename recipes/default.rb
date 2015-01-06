@@ -17,26 +17,16 @@
 # limitations under the License.
 #
 
-# https://github.com/opscode-cookbooks/apt
-include_recipe "apt"
-
-# https://github.com/opscode-cookbooks/build-essential
+include_recipe "apt" if node['base']['include']['apt']
 include_recipe "build-essential" if node['base']['include']['build_essential']
-
-# https://github.com/opscode-cookbooks/ntp/
 include_recipe "ntp" if node['base']['include']['ntp']
 
-# https://github.com/opscode-cookbooks/chef-client
 include_recipe "chef-client::delete_validation"
 include_recipe "chef-client" if node['base']['include']['chef-client']
 
-# https://github.com/sethvargo/chef-sugar
 include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
+include_recipe 'base::simple_report_handler' if node['base']['include']['simple_report_handler']
 
-# http://jtimberman.housepub.org/blog/2011/04/24/a-simple-report-handler/
-include_recipe "base::simple_report_handler" if node['base']['include']['simple_report_handler']
-
-# https://github.com/cwjohnston/chef-hipchat
 if node['base']['include']['hipchat_handler']
 
   # needed to get it installed at compiletime
@@ -46,7 +36,6 @@ if node['base']['include']['hipchat_handler']
 
 end
 
-# https://github.com/iteh/chef-slack_handler
 if node['base']['include']['slack_handler']
 
   # needed to get it installed at compiletime
