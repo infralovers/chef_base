@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'berkshelf',  '~> 3.2'
-gem 'chef'
+gem 'chef', '~> 12.0.3'
 gem 'chef_attrdoc'
 
 group :test do
@@ -28,7 +28,7 @@ group :development do
 end
 
 group :integration do
-  gem 'test-kitchen'
+  gem 'test-kitchen', github: 'test-kitchen'
   gem 'kitchen-vagrant'
 end
 
