@@ -46,6 +46,16 @@ if node['base']['include']['hipchat_handler']
 
 end
 
+# https://github.com/iteh/chef-slack_handler
+if node['base']['include']['slack_handler']
+
+  # needed to get it installed at compiletime
+  node.set['build_essential']['compiletime'] = true
+  include_recipe "build-essential"
+  include_recipe "slack_handler::default"
+
+end
+
 # https://github.com/opscode-cookbooks/vim
 include_recipe "vim"
 
