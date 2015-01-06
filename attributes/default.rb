@@ -44,7 +44,7 @@ default['base']['motd']['operation_tools'] = true
 
 # Include some operations tools
 default['base']['include']['operation_tools'] = true
-default['base']['operation-tools'] = %w( htop iotop apachetop atop nmon dstat iftop nload )
+default['base']['operation-tools'] = %w[htop iotop apachetop atop nmon dstat iftop nload]
 
 # Include [build_essential](https://github.com/opscode-cookbooks/build-essential) cookbook
 default['base']['include']['build_essential'] = false
