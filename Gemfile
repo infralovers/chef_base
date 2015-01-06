@@ -16,7 +16,6 @@ group :test do
   # https://github.com/sethvargo/chefspec/issues/336
   gem "chef-sugar"
   gem "chef-handler-updated-resources"
-
 end
 
 group :development do

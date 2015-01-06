@@ -1,10 +1,10 @@
-name             'base'
-maintainer       'Edmund Haselwanter'
+name 'base'
+maintainer 'Edmund Haselwanter'
 maintainer_email 'me@ehaselwanter.com'
-license          'All rights reserved'
-description      'Installs/Configures chef_base'
+license 'All rights reserved'
+description 'Installs/Configures chef_base'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.0'
+version '0.4.0'
 
 supports 'ubuntu'
 

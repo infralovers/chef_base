@@ -29,7 +29,6 @@ class Log
 end
 
 class Report
-
   include Mixlib::CLI
   option :reports_dir,
     :short => '-r DIR',
@@ -42,7 +41,7 @@ class Report
     :long  => '--log_level LEVEL',
     :description => 'Set the log level (debug, info)',
     :default => :info,
-    :proc => Proc.new { |l| l.to_sym }
+    :proc => proc { |l| l.to_sym }
 
   option :help,
     :short        => '-h',
@@ -52,7 +51,6 @@ class Report
     :boolean      => true,
     :show_options => true,
     :exit         => 0
-
 end
 
 cli = Report.new
