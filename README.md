@@ -12,7 +12,7 @@ Some are default as we need them to be on our nodes, some are attribute driven s
 
 ## default.rb
 
-Inlcude the apt cookbook https://github.com/opscode-cookbooks/apt cookbook
+Inlcude the [apt](https://github.com/opscode-cookbooks/apt) cookbook
 
 ```ruby
 default['base']['include']['apt'] = true

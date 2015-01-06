@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-# Inlcude the apt cookbook https://github.com/opscode-cookbooks/apt cookbook
+# Inlcude the [apt](https://github.com/opscode-cookbooks/apt) cookbook
 default['base']['include']['apt'] = true
 
 # Include the [chef_client](https://github.com/opscode-cookbooks/chef-client) cookbook
