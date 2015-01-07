@@ -5,6 +5,7 @@ require 'foodcritic'
 require 'rspec/core/rake_task'
 require "finstyle"
 require 'rubocop/rake_task'
+require 'stove/rake_task'
 
 # General tasks
 
@@ -64,3 +65,6 @@ begin
 rescue LoadError
   puts '>>>>> Kitchen gem not loaded, omitting tasks' unless ENV['CI']
 end
+
+#Publish http://sethvargo.github.io/stove/
+Stove::RakeTask.new

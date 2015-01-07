@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'berkshelf',  '~> 3.2'
 gem 'chef', '~> 12.0.3'
 gem 'chef_attrdoc'
+gem 'stove'
 
 group :test do
   gem 'rake'
