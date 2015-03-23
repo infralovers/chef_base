@@ -30,7 +30,7 @@ include_recipe 'base::simple_report_handler' if node['base']['include']['simple_
 if node['base']['include']['hipchat_handler']
 
   # needed to get it installed at compiletime
-  node.set['build_essential']['compiletime'] = true
+  node.set['build-essential']['compile_time'] = true
   include_recipe "build-essential"
   include_recipe "hipchat::handler"
 
@@ -39,7 +39,7 @@ end
 if node['base']['include']['slack_handler']
 
   # needed to get it installed at compiletime
-  node.set['build_essential']['compiletime'] = true
+  node.set['build-essential']['compile_time'] = true
   include_recipe "build-essential"
   include_recipe "slack_handler::default"
 
