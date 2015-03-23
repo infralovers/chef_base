@@ -8,7 +8,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 
 source_url 'https://github.com/iteh/chef_base'
 
-version '0.4.0'
+version '0.4.1'
 
 supports 'ubuntu' , ">= 12.04"
 
