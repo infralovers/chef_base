@@ -66,5 +66,5 @@ rescue LoadError
   puts '>>>>> Kitchen gem not loaded, omitting tasks' unless ENV['CI']
 end
 
-#Publish http://sethvargo.github.io/stove/
+# Publish http://sethvargo.github.io/stove/
 Stove::RakeTask.new

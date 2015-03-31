@@ -10,7 +10,7 @@ source_url 'https://github.com/infralovers/chef_base'
 
 version '0.4.2'
 
-supports 'ubuntu' , ">= 12.04"
+supports 'ubuntu', ">= 12.04"
 
 depends 'apt'
 depends 'build-essential'
