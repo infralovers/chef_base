@@ -8,15 +8,18 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 
 source_url 'https://github.com/infralovers/chef_base'
 
-version '0.4.2'
+version '0.4.3'
 
 supports 'ubuntu', ">= 12.04"
 
 depends 'apt'
+depends 'ubuntu'
+
 depends 'build-essential'
 depends 'ntp'
 
 depends 'chef-client'
+depends 'omnibus_updater'
 depends 'chef-sugar'
 
 depends 'chef_handler'

@@ -16,15 +16,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
 
-include_recipe "apt" if node['base']['include']['apt']
+include_recipe "apt" if debian? && node['base']['include']['apt']
+include_recipe "ubuntu" if ubuntu? && node['base']['include']['ubuntu']
+ 
 include_recipe "build-essential" if node['base']['include']['build_essential']
 include_recipe "ntp" if node['base']['include']['ntp']
 
 include_recipe "chef-client::delete_validation"
 include_recipe "chef-client" if node['base']['include']['chef-client']
+include_recipe "omnibus_updater" if node['base']['include']['omnibus-updater']
 
-include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
 include_recipe 'il-base::simple_report_handler' if node['base']['include']['simple_report_handler']
 
 if node['base']['include']['hipchat_handler']

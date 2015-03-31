@@ -20,8 +20,14 @@
 # Inlcude the [apt](https://github.com/opscode-cookbooks/apt) cookbook
 default['base']['include']['apt'] = true
 
+# Inlcude the [ubuntu](https://supermarket.chef.io/cookbooks/ubuntu) cookbook
+default['base']['include']['ubuntu'] = true
+
 # Include the [chef_client](https://github.com/opscode-cookbooks/chef-client) cookbook
 default['base']['include']['chef-client'] = false
+
+# Include the [omnibus_updater](https://supermarket.chef.io/cookbooks/omnibus_updater)
+default['base']['include']['omnibus-updater'] = true
 
 # Include a [simple report handler](http://jtimberman.housepub.org/blog/2011/04/24/a-simple-report-handler/) which outputs updated resources to stdout
 default['base']['include']['simple_report_handler'] = true
