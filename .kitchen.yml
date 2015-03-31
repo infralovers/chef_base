@@ -15,9 +15,9 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[base::default]
+      - recipe[il-base::default]
     attributes: 
       chef_base:
         include:
-          hipchat_handler: true
+          hipchat_handler: false
 
