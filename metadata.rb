@@ -1,12 +1,12 @@
-name 'base'
+name 'il-base'
 maintainer 'Edmund Haselwanter'
 maintainer_email 'me@ehaselwanter.com'
 license 'Apache v2.0'
 
-description 'Installs/Configures chef_base'
+description 'Installs/Configures il_base'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 
-source_url 'https://github.com/iteh/chef_base'
+source_url 'https://github.com/infralovers/chef_base'
 
 version '0.4.1'
 
