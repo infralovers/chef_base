@@ -25,7 +25,7 @@ include_recipe "chef-client::delete_validation"
 include_recipe "chef-client" if node['base']['include']['chef-client']
 
 include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
-include_recipe 'base::simple_report_handler' if node['base']['include']['simple_report_handler']
+include_recipe 'il-base::simple_report_handler' if node['base']['include']['simple_report_handler']
 
 if node['base']['include']['hipchat_handler']
 
@@ -52,5 +52,5 @@ include_recipe "vim"
 node.normal['tmux']['session_opts']['prefix'] = 'C-b'
 include_recipe 'tmux'
 
-include_recipe "base::motd" if node['base']['include']['motd']
-include_recipe "base::operation_tools" if node['base']['include']['operation_tools']
+include_recipe "il-base::motd" if node['base']['include']['motd']
+include_recipe "il-base::operation_tools" if node['base']['include']['operation_tools']

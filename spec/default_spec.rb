@@ -1,7 +1,7 @@
 require "spec_helper"
 
 # Write unit tests with ChefSpec - https://github.com/sethvargo/chefspec#readme
-describe "base::default" do
+describe "il-base::default" do
   let(:chef_run) do
     ChefSpec::SoloRunner.new do
       # nedded for the chef-client::delete_validation

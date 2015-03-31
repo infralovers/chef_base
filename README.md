@@ -1,6 +1,6 @@
-# base-cookbook
+# il-base cookbook
 
-Base is a application cookbook around base cookbooks and recipes we want to include in our environments.
+IL-Base is a application cookbook around base cookbooks and recipes we want to include in our environments.
 
 Some are default as we need them to be on our nodes, some are attribute driven so we can specify if we want to include them.
 
@@ -77,14 +77,14 @@ default['base']['include']['build_essential'] = false
 
 ## Usage
 
-### chef_base::default
+### il-base::default
 
-Include `base` in your node's `run_list`:
+Include `il-base` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[base::default]"
+    "recipe[il-base::default]"
   ]
 }
 ```
