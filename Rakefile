@@ -67,4 +67,6 @@ rescue LoadError
 end
 
 # Publish http://sethvargo.github.io/stove/
-Stove::RakeTask.new
+Stove::RakeTask.new do |task|
+  task.stove_opts = ['--extended-metadata']
+end
