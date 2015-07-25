@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5
+
+- version bump and add stove extended metadata [view commit](http://github.com///commit/d8808d7a6775fa04908890431bd9ae4b487515fa)
+- 
 ## 0.4.4
 
 - pin chef-handler-updated-resources gem due to bug in gem [view commit](http://github.com///commit/bf4c2478798a2dda3a8653c9eb12879797c7ee2d)
