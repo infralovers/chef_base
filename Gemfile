@@ -29,7 +29,7 @@ group :development do
 end
 
 group :integration do
-  gem 'test-kitchen', github: 'test-kitchen'
+  gem 'test-kitchen'
   gem 'kitchen-vagrant'
 end
 
