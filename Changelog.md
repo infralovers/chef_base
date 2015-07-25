@@ -2,8 +2,13 @@
 
 ## 0.4.5
 
+- update to finstyle 1.5 and fix files to use this config [view commit](http://github.com///commit/978ea379323bc42e9f0f92dc03312b2621aef38e)
+- use current stable kitchen [view commit](http://github.com///commit/ffb179f517fce8511015fe9fc9f40ed64e78f11e)
+- line prefix bug [view commit](http://github.com///commit/ba0043e4de9c2ee281edb5f1e3ec06658676ae6d)
+- allow for minor versions of chef [view commit](http://github.com///commit/2e4dcfc48fc7256373d461683b405e9c06b2d24b)
+- update change log [view commit](http://github.com///commit/4dbc16903a9f2797b0aa09d0cd5ca561a08c9580)
 - version bump and add stove extended metadata [view commit](http://github.com///commit/d8808d7a6775fa04908890431bd9ae4b487515fa)
-- 
+
 ## 0.4.4
 
 - pin chef-handler-updated-resources gem due to bug in gem [view commit](http://github.com///commit/bf4c2478798a2dda3a8653c9eb12879797c7ee2d)
