@@ -74,5 +74,5 @@ reports.each do |json|
     Log.debug "#{time}              source #{res.source_line}"
   end
 
-  Log.info "#{r["end_time"]} run ended"
+  Log.info "#{r['end_time']} run ended"
 end

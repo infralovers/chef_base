@@ -20,7 +20,7 @@ include_recipe 'chef-sugar' if node['base']['include']['chef-sugar']
 
 include_recipe "apt" if debian? && node['base']['include']['apt']
 include_recipe "ubuntu" if ubuntu? && node['base']['include']['ubuntu']
- 
+
 include_recipe "build-essential" if node['base']['include']['build_essential']
 include_recipe "ntp" if node['base']['include']['ntp']
 

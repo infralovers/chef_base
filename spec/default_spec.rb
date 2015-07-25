@@ -9,7 +9,7 @@ describe "il-base::default" do
     end.converge(described_recipe)
   end
 
-  %w[apt vim tmux].each do |rcp|
+  %w( apt vim tmux ).each do |rcp|
     it "should include the #{rcp} recipe" do
       expect(chef_run).to include_recipe rcp
     end
