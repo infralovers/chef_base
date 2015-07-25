@@ -17,7 +17,7 @@ group :test do
   # add gems for the spec tests otherwise it will fail to require
   # https://github.com/sethvargo/chefspec/issues/336
   gem "chef-sugar"
-  gem "chef-handler-updated-resources"
+  gem "chef-handler-updated-resources", '= 0.1'
 end
 
 group :development do
