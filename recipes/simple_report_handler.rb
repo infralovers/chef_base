@@ -2,7 +2,7 @@
 # Cookbook Name:: base
 # Recipe:: simple_report_handler
 #
-# Copyright (C) 2014 Edmund Haselwanter
+# Copyright (C) 2015 Edmund Haselwanter
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,10 @@
 # limitations under the License.
 #
 
-chef_gem "chef-handler-updated-resources"
+chef_gem "chef-handler-updated-resources" do
+  version "0.1"
+end
+
 require 'chef/handler/updated_resources'
 
 include_recipe "chef_handler"
